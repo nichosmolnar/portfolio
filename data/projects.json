@@ -1,0 +1,37 @@
+[{
+    "id": "parsons-thesis",
+    "Title": "The Last Sushi in the World",
+    "category": "Parsons",
+    "description": "Thesis will go here!"
+},
+{
+    "id": "parsons-ms1",
+    "Title": "Faces of the Fathers",
+    "category": "Parsons",
+    "description": "A Founding Father Wordle game and data explored made for the Smithsonian's Revolutionary History collections."
+},
+{
+    "id": "parsons-ds",
+    "Title": "New York Leaf Finder",
+    "category": "Parsons",
+    "description": "A lookup tool that tells you the colors, shapes, and quantities of leaves you will find walking down any given New York City street in Autumn."
+},
+{
+    "id": "parsons-intro",
+    "Title": "Netflix Runtimes",
+    "category": "Parsons",
+    "description": "An analysis and visualization of the runtimes of movies watched on Netflix in 2025, and how their length affected their popularity."
+},
+{
+    "id": "parsons-dam1",
+    "Title": "Nose-Touch",
+    "category": "Parsons",
+    "description": "A postcard and poster tracking an unconcious tick."
+},
+{
+    "id": "parsons-dam2",
+    "Title": "Dulce Et Decorum Est",
+    "category": "Parsons",
+    "description": "A visual and graphical remix of a famous anti-war poem, and a website that wraps the whole experience."
+}
+]
