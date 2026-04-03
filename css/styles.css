@@ -12,6 +12,7 @@ body {
     background-color: var(--bg-color);
 }
 
+
 .website-header {
     background-color: var(--bg-color);
     color: #fff;
@@ -72,7 +73,7 @@ main {
 .portfolio-item {
     background-color: #fff;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -127,3 +128,10 @@ main {
     }
 }
 
+footer {
+    background-color: var(--bg-color);
+    color: #000000;
+    text-align: left;
+    padding: 20px;
+    margin-top: 40px;
+}

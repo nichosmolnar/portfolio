@@ -29,6 +29,12 @@
     "description": "A postcard and poster tracking an unconcious tick."
 },
 {
+    "id": "parsons-ml",
+    "Title": "Kamon Machine Learning",
+    "category": "Parsons",
+    "description": "A machine learning classification of Japanese Kamon crests."
+},
+{
     "id": "parsons-dam2",
     "Title": "Dulce Et Decorum Est",
     "category": "Parsons",
