@@ -2,42 +2,81 @@
     "id": "parsons-thesis",
     "Title": "The Last Sushi in the World",
     "category": "Parsons",
-    "description": "Thesis will go here!"
+    "description": "Are we running out of sushi?",
+    "website_link": "https://nmolnar-parsons.github.io/thesis/",
+    "repository_link": "https://github.com/nmolnar-parsons/thesis",
+    "image_path": "assets/hero_images/parsons-thesis.png",
+    "image_link_raw": ""
 },
 {
     "id": "parsons-ms1",
     "Title": "Faces of the Fathers",
     "category": "Parsons",
-    "description": "A Founding Father Wordle game and data explored made for the Smithsonian's Revolutionary History collections."
+    "description": "A Founding Father Wordle game and data explored made for the Smithsonian's Revolutionary History collections.",
+    "website_link": "https://nmolnar-parsons.github.io/major-studio-1/final/",
+    "repository_link": "https://github.com/nmolnar-parsons/major-studio-1",
+    "image_path": "assets/hero_images/parsons-ms1.png",
+    "image_link_raw": ""
+},
+{
+    "id": "parsons-dam4",
+    "Title": "A Day Like This",
+    "category": "Parsons",
+    "description": "A visualization of 25 years of North American weather data, which shows days in history that had the same weather as the current day.",
+    "website_link": "https://nmolnar-parsons.github.io/data_as_material/04_Data-Experience/",
+    "repository_link": "https://github.com/nmolnar-parsons/data_as_material",
+    "image_path": "assets/hero_images/parsons-dam4.png",
+    "image_link_raw": ""
 },
 {
     "id": "parsons-ds",
     "Title": "New York Leaf Finder",
     "category": "Parsons",
-    "description": "A lookup tool that tells you the colors, shapes, and quantities of leaves you will find walking down any given New York City street in Autumn."
+    "description": "A lookup tool that tells you the colors, shapes, and quantities of leaves you will find walking down any given New York City street in Autumn.",
+    "website_link": "https://nmolnar-parsons.github.io/datastructures_final/",
+    "repository_link": "https://github.com/nmolnar-parsons/datastructures_final",
+    "image_path": "assets/hero_images/parsons-ds.png",
+    "image_link_raw": ""
 },
 {
     "id": "parsons-intro",
-    "Title": "Netflix Runtimes",
+    "Title": "Netflix Attention Spans",
     "category": "Parsons",
-    "description": "An analysis and visualization of the runtimes of movies watched on Netflix in 2025, and how their length affected their popularity."
+    "description": "An analysis and visualization of the runtimes of movies watched on Netflix in 2025, and how their length affected their popularity.",
+    "website_link": "https://nmolnar-parsons.github.io/Netflix_AttentionSpans/",
+    "repository_link": "https://github.com/nmolnar-parsons/Netflix_AttentionSpans",
+    "image_path": "assets/hero_images/parsons-intro.png",
+    "image_link_raw": ""
 },
 {
     "id": "parsons-dam1",
-    "Title": "Nose-Touch",
+    "Title": "Nose—Touch",
     "category": "Parsons",
-    "description": "A postcard and poster tracking an unconcious tick."
+    "description": "A postcard and poster tracking an unconcious phyiscal habit.",
+    "website_link": "",
+    "repository_link": "",
+    "image_path": "assets/hero_images/parsons-dam1.jpg",
+    "image_link_raw": ""
 },
 {
     "id": "parsons-ml",
     "Title": "Kamon Machine Learning",
     "category": "Parsons",
-    "description": "A machine learning classification of Japanese Kamon crests."
+    "description": "A machine learning classification of Japanese Kamon crests.",
+    "website_link": "https://github.com/Machine-Learning-Parsons-Fall-2025/Project/blob/main/kamon_final_notebook.ipynb",
+    "repository_link": "https://github.com/Machine-Learning-Parsons-Fall-2025/Project",
+    "image_path": "assets/hero_images/parsons-ml.png",
+    "image_link_raw": ""
 },
 {
     "id": "parsons-dam2",
     "Title": "Dulce Et Decorum Est",
     "category": "Parsons",
-    "description": "A visual and graphical remix of a famous anti-war poem, and a website that wraps the whole experience."
+    "description": "A visual and graphical remix of a famous anti-war poem, and a website that wraps the whole experience.",
+    "website_link": "https://nmolnar-parsons.github.io/data_as_material/01_Remix_Poem/",
+    "repository_link": "https://github.com/nmolnar-parsons/data_as_material",
+    "image_path": "assets/hero_images/parsons-dam2.png",
+    "image_link_raw": ""
 }
 ]
+
