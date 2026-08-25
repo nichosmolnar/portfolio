@@ -9,13 +9,13 @@
     "image_link_raw": ""
 },
 {
-    "id": "parsons-ms1",
-    "Title": "Faces of the Fathers",
-    "category": "Parsons",
-    "description": "A Founding Father Wordle game and data explored made for the Smithsonian's Revolutionary History collections.",
-    "website_link": "https://nmolnar-parsons.github.io/major-studio-1/final/",
-    "repository_link": "https://github.com/nmolnar-parsons/major-studio-1",
-    "image_path": "assets/hero_images/parsons-ms1.png",
+    "id": "freelance-nyu-era",
+    "Title": "State Constitutions and Equal Rights Amendments",
+    "category": "Freelance",
+    "description": "Sex Equality Now: State Constitutions and Equal Rights Amendments, is a visualization of the state of Equal Rights in state constitutions in the United States.",
+    "website_link": "",
+    "repository_link": "",
+    "image_path": "assets/hero_images/freelance-nyu-era.png",
     "image_link_raw": ""
 },
 {
@@ -26,6 +26,16 @@
     "website_link": "https://nmolnar-parsons.github.io/data_as_material/04_Data-Experience/",
     "repository_link": "https://github.com/nmolnar-parsons/data_as_material",
     "image_path": "assets/hero_images/parsons-dam4.png",
+    "image_link_raw": ""
+},
+{
+    "id": "parsons-ms1",
+    "Title": "Faces of the Fathers",
+    "category": "Parsons",
+    "description": "A Founding Father Wordle game and data explored made for the Smithsonian's Revolutionary History collections.",
+    "website_link": "https://nmolnar-parsons.github.io/major-studio-1/final/",
+    "repository_link": "https://github.com/nmolnar-parsons/major-studio-1",
+    "image_path": "assets/hero_images/parsons-ms1.png",
     "image_link_raw": ""
 },
 {

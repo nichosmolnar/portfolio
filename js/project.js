@@ -46,7 +46,7 @@ fetch('../data/projects.json')
             heroImage.alt = project.Title;
         }
 
-        if (descriptionEl) {
+        if (descriptionEl && !descriptionEl.innerHTML.trim()) {
             descriptionEl.textContent = project.description;
         }
 
