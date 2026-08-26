@@ -27,7 +27,11 @@
                         <span class="project-links-separator"> | </span>
                         <a class="project-external-link project-repo-link" target="_blank" rel="noopener noreferrer"></a>
                     </div>
-                    <p class="project-description"></p>
+                    <div class="project-description">
+                        <p>Kamon are historical Japanese crests used to identify people and families, which are traditionally categorized into five groups: plants, animals, objects, buildings/architecture, and objects. I was interested if machine learning classification methods could identify hidden visual patterns in Kamon crests.</p>
+                        <p>I built a custom dataset of 5,359 crest images scraped and translated from KamonDB. I extracted image contours from each crest (converting images to true greyscale, dilating and thresholding, isolating the largest valid contour), and standardized, centered, and sorted these contours via K-means to produce numerical features suitable for clustering. I used PCA and t-SNE to visualize these  features. I found that K-means clustering consistently converged on three dominant shape groupings — diamond, circle, and bottom-heavy/triangular — rather than the crests' traditional symbolic categories. A chi-square analysis showed some statistically significant associations (e.g., diamond-shaped clusters skewing toward plant motifs, bottom-heavy clusters skewing toward animals/nature), though overall shape explained much more of the clustering than semantic category. </p>
+                        <p>This project demonstrates how simple machine learning methods can be used to find insights from large visual datasets.</p>
+                    </div>
                 </div>
             </section>
         </article>

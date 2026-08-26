@@ -29,6 +29,26 @@
     "image_link_raw": ""
 },
 {
+    "id": "parsons-intro",
+    "Title": "Netflix Attention Spans",
+    "category": "Parsons",
+    "description": "An analysis and visualization of the runtimes of movies watched on Netflix in 2025, and how their length affected their popularity.",
+    "website_link": "https://nmolnar-parsons.github.io/Netflix_AttentionSpans/",
+    "repository_link": "https://github.com/nmolnar-parsons/Netflix_AttentionSpans",
+    "image_path": "assets/hero_images/parsons-intro.png",
+    "image_link_raw": ""
+},
+{
+    "id": "parsons-ml",
+    "Title": "Kamon Machine Learning",
+    "category": "Parsons",
+    "description": "A machine learning classification of Japanese Kamon crests.",
+    "website_link": "https://github.com/Machine-Learning-Parsons-Fall-2025/Project/blob/main/kamon_final_notebook.ipynb",
+    "repository_link": "https://github.com/Machine-Learning-Parsons-Fall-2025/Project",
+    "image_path": "assets/hero_images/parsons-ml.png",
+    "image_link_raw": ""
+},
+{
     "id": "parsons-ms1",
     "Title": "Faces of the Fathers",
     "category": "Parsons",
@@ -49,16 +69,6 @@
     "image_link_raw": ""
 },
 {
-    "id": "parsons-intro",
-    "Title": "Netflix Attention Spans",
-    "category": "Parsons",
-    "description": "An analysis and visualization of the runtimes of movies watched on Netflix in 2025, and how their length affected their popularity.",
-    "website_link": "https://nmolnar-parsons.github.io/Netflix_AttentionSpans/",
-    "repository_link": "https://github.com/nmolnar-parsons/Netflix_AttentionSpans",
-    "image_path": "assets/hero_images/parsons-intro.png",
-    "image_link_raw": ""
-},
-{
     "id": "parsons-dam1",
     "Title": "Nose—Touch",
     "category": "Parsons",
@@ -66,16 +76,6 @@
     "website_link": "",
     "repository_link": "",
     "image_path": "assets/hero_images/parsons-dam1.jpg",
-    "image_link_raw": ""
-},
-{
-    "id": "parsons-ml",
-    "Title": "Kamon Machine Learning",
-    "category": "Parsons",
-    "description": "A machine learning classification of Japanese Kamon crests.",
-    "website_link": "https://github.com/Machine-Learning-Parsons-Fall-2025/Project/blob/main/kamon_final_notebook.ipynb",
-    "repository_link": "https://github.com/Machine-Learning-Parsons-Fall-2025/Project",
-    "image_path": "assets/hero_images/parsons-ml.png",
     "image_link_raw": ""
 },
 {
