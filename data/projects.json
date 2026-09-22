@@ -33,8 +33,8 @@
     "Title": "Netflix Attention Spans",
     "category": "Parsons",
     "description": "An analysis and visualization of the runtimes of movies watched on Netflix in 2025, and how their length affected their popularity.",
-    "website_link": "https://nmolnar-parsons.github.io/Netflix_AttentionSpans/",
-    "repository_link": "https://github.com/nmolnar-parsons/Netflix_AttentionSpans",
+    "website_link": "https://nmolnar-parsons.github.io/AttentionSpans/",
+    "repository_link": "https://github.com/nmolnar-parsons/AttentionSpans",
     "image_path": "assets/hero_images/parsons-intro.png",
     "image_link_raw": ""
 },
