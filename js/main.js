@@ -1,3 +1,32 @@
+function siteRoot() {
+    if (!window.__siteRoot) {
+        const inContent = /\/content\//.test(location.pathname);
+        window.__siteRoot = new URL(inContent ? '../' : './', document.baseURI).href;
+    }
+    return window.__siteRoot;
+}
+
+siteRoot();
+
+let projectsPromise;
+
+function loadProjects() {
+    if (!projectsPromise) {
+        projectsPromise = fetch(new URL('data/projects.json', siteRoot()))
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load projects');
+                }
+                return response.json();
+            })
+            .catch(error => {
+                projectsPromise = null;
+                throw error;
+            });
+    }
+    return projectsPromise;
+}
+
 function loadPortfolioImage(img, item) {
     const src = img.dataset.src;
     if (!src) {
@@ -22,7 +51,7 @@ function loadPortfolioImage(img, item) {
 function createProjectCard(project) {
     const link = document.createElement('a');
     link.className = 'portfolio-link';
-    link.href = `content/${project.id}.html`;
+    link.href = new URL(`content/${project.id}.html`, siteRoot()).href;
 
     const container = document.createElement('div');
     container.className = 'portfolio-container';
@@ -34,7 +63,7 @@ function createProjectCard(project) {
         const img = document.createElement('img');
         img.className = 'portfolio-image';
         img.alt = project.Title;
-        img.dataset.src = project.image_path;
+        img.dataset.src = new URL(project.image_path, siteRoot()).href;
         item.appendChild(img);
     } else {
         item.classList.add('image-loaded');
@@ -65,21 +94,41 @@ function createProjectCard(project) {
     return { container: link, item };
 }
 
-fetch('data/projects.json')
-    .then(response => response.json())
-    .then(projects => {
-        const portfolioGrid = document.getElementById('portfolioGrid');
-        const cards = projects.map(project => {
-            const card = createProjectCard(project);
-            portfolioGrid.appendChild(card.container);
-            return card;
-        });
+function initHome() {
+    const portfolioGrid = document.getElementById('portfolioGrid');
+    if (!portfolioGrid || portfolioGrid.dataset.loading === 'true') {
+        return Promise.resolve();
+    }
 
-        cards.forEach(({ item }) => {
-            const img = item.querySelector('.portfolio-image');
-            if (img) {
-                loadPortfolioImage(img, item);
+    portfolioGrid.dataset.loading = 'true';
+
+    return loadProjects()
+        .then(projects => {
+            if (!portfolioGrid.isConnected) {
+                return;
             }
+
+            const cards = projects.map(project => {
+                const card = createProjectCard(project);
+                portfolioGrid.appendChild(card.container);
+                return card;
+            });
+
+            cards.forEach(({ item }) => {
+                const img = item.querySelector('.portfolio-image');
+                if (img) {
+                    loadPortfolioImage(img, item);
+                }
+            });
+        })
+        .catch(error => {
+            if (portfolioGrid.isConnected) {
+                delete portfolioGrid.dataset.loading;
+            }
+            console.error('Error loading projects:', error);
         });
-    })
-    .catch(error => console.error('Error loading projects:', error));
+}
+
+window.siteRoot = siteRoot;
+window.loadProjects = loadProjects;
+window.initHome = initHome;

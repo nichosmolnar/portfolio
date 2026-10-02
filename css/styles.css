@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Roboto+Slab:wght@400;700&display=swap');
 
 :root {
-    --bg-color: #ebeff3;
-    --page-gutter: 100px;
+    --bg-color: #f6f6f4;
+    --page-gutter: 30px;
+    --nav-hover-color: rgb(112, 112, 148);
+    --copy-font: 'Roboto Slab', serif;
 }
 
 * {
@@ -18,7 +20,7 @@ body {
 
 .website-header {
     background-color: var(--bg-color);
-    color: #fff;
+    color: #000;
     padding: 20px var(--page-gutter);
     display: flex;
     justify-content: space-between;
@@ -33,7 +35,7 @@ body {
     left: var(--page-gutter);
     right: var(--page-gutter);
     height: 2px;
-    background-color: #fff;
+    background-color: #000;
 }   
 
 .website-header a {
@@ -47,68 +49,59 @@ body {
     font-weight: 400;
 }
 
+.name:hover {
+    color: var(--nav-hover-color);
+}
+
 nav {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.social-links {
+.about-contact {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 12px;
+    font-family: var(--copy-font);
+    font-size: 14px;
+    line-height: 1;
 }
 
-.social-links a {
-    color: #000;
+.about-contact a,
+.about-contact a:visited {
+    color: #111;
     display: flex;
     line-height: 0;
+    text-decoration: none;
 }
 
-.social-links a:hover {
-    opacity: 0.6;
+.about-contact a:hover {
+    color: var(--nav-hover-color);
 }
 
-.social-links svg {
+.about-email:hover {
+    color: var(--nav-hover-color);
+}
+
+.about-contact svg {
     width: 18px;
     height: 18px;
     fill: currentColor;
 }
 
-.about-contact {
-    width: 100%;
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 2px solid #fff;
-}
-
-.about-contact h2 {
-    font-family: 'Aldrich', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #000;
-    margin-bottom: 12px;
-}
-
-.social-links .about-email {
-    color: #666;
-    font-size: 18px;
-    line-height: 1;
-}
-
-.about-contact .social-links a,
-.about-contact .social-links a:visited {
-    color: #666;
-}
-
-.about-contact .social-links svg {
-    width: 28px;
-    height: 28px;
+.about-email {
+    color: #111;
 }
 
 nav a {
     font-family: 'Aldrich', sans-serif;
     font-size: 16px;
+}
+
+nav a:hover {
+    color: var(--nav-hover-color);
 }
 
 main {
@@ -119,7 +112,7 @@ main {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 16px;
     max-width: 100%;
 }
 
@@ -133,7 +126,7 @@ main {
     background-color: #fff;
     width: 100%;
     aspect-ratio: 16 / 9;
-    border-radius: 8px;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,7 +202,8 @@ main {
 }
 
 .portfolio-description {
-    color: #666;
+    color: #000;
+    font-family: var(--copy-font);
     font-size: 14px;
     line-height: 1.5;
     min-height: 40px;
@@ -309,7 +303,8 @@ footer {
 }
 
 .project-description {
-    color: #666;
+    color: #000;
+    font-family: var(--copy-font);
     font-size: 16px;
     line-height: 1.5;
 }
@@ -330,50 +325,55 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 40px;
+    gap: 48px;
+    max-width: 960px;
+    margin-inline: auto;
+}
+
+.about-side {
+    flex: 0 0 260px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .about-copy {
     flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
-}
-
-.about-copy > h2 {
-    font-family: 'Aldrich', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #000;
-    padding-bottom: 16px;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #fff;
+    font-family: var(--copy-font);
 }
 
 .about-copy p {
-    color: #666;
+    color: #111;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.6;
+}
+
+.about-copy > p:first-child {
+    text-box-trim: trim-start;
+    text-box-edge: cap alphabetic;
+}
+
+.about-copy p + p {
+    margin-top: 1.15em;
+}
+
+.about-copy strong {
+    font-weight: 700;
 }
 
 .about-skills {
-    width: 100%;
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 2px solid #fff;
-}
-
-.about-skills h2 {
-    font-family: 'Aldrich', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #000;
-    margin-bottom: 12px;
+    font-family: var(--copy-font);
+    font-size: 14px;
+    line-height: 1.5;
+    color: #111;
 }
 
 .about-photo {
-    flex: 0 0 400px;
-    width: 400px;
-    max-width: 100%;
+    width: 100%;
 }
 
 .about-photo img {
@@ -393,10 +393,51 @@ footer {
 
     .about-section {
         flex-direction: column;
+        max-width: none;
+        margin-inline: 0;
+        gap: 48px;
+    }
+
+    .about-side {
+        flex-basis: auto;
+        width: 100%;
     }
 
     .about-photo {
-        flex-basis: auto;
-        width: min(400px, 100%);
+        width: 240px;
+        max-width: 100%;
+        margin-inline: auto;
+    }
+
+    .about-contact {
+        width: fit-content;
+        margin-inline: auto;
+    }
+
+    .about-skills {
+        width: 240px;
+        max-width: 100%;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .website-header {
+        gap: 12px;
+    }
+
+    .name {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    nav {
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    nav a {
+        font-size: 14px;
+        white-space: nowrap;
     }
 }

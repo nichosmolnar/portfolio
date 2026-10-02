@@ -1,5 +1,3 @@
-const projectId = document.body.dataset.projectId;
-
 function setExternalLink(linkEl, url, label) {
     if (!linkEl) return false;
 
@@ -14,51 +12,66 @@ function setExternalLink(linkEl, url, label) {
     return false;
 }
 
-fetch('../data/projects.json')
-    .then(response => response.json())
-    .then(projects => {
-        const project = projects.find(p => p.id === projectId);
+function projectIdFromLocation() {
+    const match = location.pathname.match(/\/content\/([^/]+)\.html$/);
+    return match ? decodeURIComponent(match[1]) : '';
+}
 
-        if (!project) {
-            const detail = document.querySelector('.project-detail');
-            if (detail) {
-                detail.innerHTML = '<p>Project not found.</p>';
+function initProject() {
+    const projectId = projectIdFromLocation();
+    const detail = document.querySelector('.project-detail');
+    if (!projectId || !detail) {
+        return Promise.resolve();
+    }
+
+    return window.loadProjects()
+        .then(projects => {
+            if (!detail.isConnected) {
+                return;
             }
-            return;
-        }
 
-        document.title = `${project.Title} - Nichos Molnar`;
+            const project = projects.find(item => item.id === projectId);
 
-        const titleEl = document.querySelector('.project-title');
-        const heroImage = document.querySelector('.project-hero-image');
-        const descriptionEl = document.querySelector('.project-description');
-        const liveLink = document.querySelector('.project-live-link');
-        const repoLink = document.querySelector('.project-repo-link');
-        const separator = document.querySelector('.project-links-separator');
-        const linksContainer = document.querySelector('.project-links');
+            if (!project) {
+                detail.innerHTML = '<p>Project not found.</p>';
+                return;
+            }
 
-        if (titleEl) {
-            titleEl.textContent = project.Title;
-        }
+            document.title = `${project.Title} - Nichos Molnar`;
 
-        if (heroImage && project.image_path) {
-            heroImage.src = `../${project.image_path}`;
-            heroImage.alt = project.Title;
-        }
+            const titleEl = detail.querySelector('.project-title');
+            const heroImage = detail.querySelector('.project-hero-image');
+            const descriptionEl = detail.querySelector('.project-description');
+            const liveLink = detail.querySelector('.project-live-link');
+            const repoLink = detail.querySelector('.project-repo-link');
+            const separator = detail.querySelector('.project-links-separator');
+            const linksContainer = detail.querySelector('.project-links');
 
-        if (descriptionEl && !descriptionEl.innerHTML.trim()) {
-            descriptionEl.textContent = project.description;
-        }
+            if (titleEl) {
+                titleEl.textContent = project.Title;
+            }
 
-        const hasLiveLink = setExternalLink(liveLink, project.website_link, 'Live Project');
-        const hasRepoLink = setExternalLink(repoLink, project.repository_link, 'GitHub Repository');
+            if (heroImage && project.image_path) {
+                heroImage.src = new URL(project.image_path, window.siteRoot()).href;
+                heroImage.alt = project.Title;
+            }
 
-        if (separator) {
-            separator.style.display = hasLiveLink && hasRepoLink ? '' : 'none';
-        }
+            if (descriptionEl && !descriptionEl.innerHTML.trim()) {
+                descriptionEl.textContent = project.description;
+            }
 
-        if (linksContainer && !hasLiveLink && !hasRepoLink) {
-            linksContainer.style.display = 'none';
-        }
-    })
-    .catch(error => console.error('Error loading project:', error));
+            const hasLiveLink = setExternalLink(liveLink, project.website_link, 'Live Project');
+            const hasRepoLink = setExternalLink(repoLink, project.repository_link, 'GitHub Repository');
+
+            if (separator) {
+                separator.style.display = hasLiveLink && hasRepoLink ? '' : 'none';
+            }
+
+            if (linksContainer && !hasLiveLink && !hasRepoLink) {
+                linksContainer.style.display = 'none';
+            }
+        })
+        .catch(error => console.error('Error loading project:', error));
+}
+
+window.initProject = initProject;
