@@ -29,6 +29,27 @@
     "image_link_raw": ""
 },
 {
+    "id": "parsons-ms1",
+    "Title": "Faces of the Fathers",
+    "category": "Parsons",
+    "description": "A Founding Father Wordle game and data explored made for the Smithsonian's Revolutionary History collections.",
+    "website_link": "https://nmolnar-parsons.github.io/major-studio-1/final/",
+    "repository_link": "https://github.com/nmolnar-parsons/major-studio-1",
+    "image_path": "assets/hero_images/parsons-ms1.png",
+    "image_link_raw": ""
+},
+{
+    "id": "parsons-ds",
+    "Title": "New York Leaf Finder",
+    "category": "Parsons",
+    "description": "A lookup tool that tells you the colors, shapes, and quantities of leaves you will find walking down any given New York City street in Autumn.",
+    "website_link": "https://nichosmolnar.github.io/NYC_Fall_Leaf_Maps/",
+    "repository_link": "https://github.com/nmolnar-parsons/datastructures_final",
+    "image_path": "assets/hero_images/parsons-ds.png",
+    "image_link_raw": ""
+},
+
+{
     "id": "parsons-intro",
     "Title": "Netflix Attention Spans",
     "category": "Parsons",
@@ -46,26 +67,6 @@
     "website_link": "https://github.com/Machine-Learning-Parsons-Fall-2025/Project/blob/main/kamon_final_notebook.ipynb",
     "repository_link": "https://github.com/Machine-Learning-Parsons-Fall-2025/Project",
     "image_path": "assets/hero_images/parsons-ml.png",
-    "image_link_raw": ""
-},
-{
-    "id": "parsons-ms1",
-    "Title": "Faces of the Fathers",
-    "category": "Parsons",
-    "description": "A Founding Father Wordle game and data explored made for the Smithsonian's Revolutionary History collections.",
-    "website_link": "https://nmolnar-parsons.github.io/major-studio-1/final/",
-    "repository_link": "https://github.com/nmolnar-parsons/major-studio-1",
-    "image_path": "assets/hero_images/parsons-ms1.png",
-    "image_link_raw": ""
-},
-{
-    "id": "parsons-ds",
-    "Title": "New York Leaf Finder",
-    "category": "Parsons",
-    "description": "A lookup tool that tells you the colors, shapes, and quantities of leaves you will find walking down any given New York City street in Autumn.",
-    "website_link": "https://nmolnar-parsons.github.io/datastructures_final/",
-    "repository_link": "https://github.com/nmolnar-parsons/datastructures_final",
-    "image_path": "assets/hero_images/parsons-ds.png",
     "image_link_raw": ""
 },
 {
